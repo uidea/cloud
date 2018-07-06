@@ -5,6 +5,7 @@
     <artifactId>cloud</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>com.cloud.web</artifactId>
+  <groupId>com.cloud.controller</groupId>
+  <artifactId>com.cloud.controller</artifactId>
   <packaging>war</packaging>
 </project>
