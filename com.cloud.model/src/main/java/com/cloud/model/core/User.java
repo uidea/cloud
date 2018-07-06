@@ -4,7 +4,9 @@
 package com.cloud.model.core;
 
 /**
- * ClassName: User Description: 用户信息 date: 2018年7月6日 下午4:54:11
+ * @ClassName: User
+ * @Description: 用户信息
+ * @date: 2018年7月6日 下午4:54:11
  * 
  * @author liubin
  * @email aguai_liu@163.com
