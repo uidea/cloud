@@ -5,9 +5,9 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
   <modules>
-  	<module>com.cloud.common</module>
-  	<module>com.cloud.service</module>
-  	<module>com.cloud.model</module>
-  	<module>com.cloud.dao</module>
+  <module>com.cloud.common</module>
+  <module>com.cloud.service</module>
+  <module>com.cloud.model</module>
+  <module>com.cloud.dao</module>
   </modules>
 </project>
