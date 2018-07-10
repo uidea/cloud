@@ -15,6 +15,7 @@ package com.cloud.model.core;
  */
 public class User {
 
+	private String id;
 	private String name;
 	private String age;
 	private String sex;// 0女生 1男生
@@ -27,7 +28,14 @@ public class User {
 	private String lastModifyUser;
 
 	public User() {
-		// TODO Auto-generated constructor stub
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
 	}
 
 	public String getName() {
@@ -108,6 +116,16 @@ public class User {
 
 	public void setLastModifyUser(String lastModifyUser) {
 		this.lastModifyUser = lastModifyUser;
+	}
+
+	/*
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", name=" + name + ", age=" + age + ", sex=" + sex + ", idNo=" + idNo + ", address=" + address + ", edu="
+				+ edu + ", dept=" + dept + ", telNo=" + telNo + ", lastModifyDate=" + lastModifyDate + ", lastModifyUser=" + lastModifyUser
+				+ "]";
 	}
 
 }
