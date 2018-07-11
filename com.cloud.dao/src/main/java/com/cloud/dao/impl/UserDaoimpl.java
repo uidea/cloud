@@ -1,6 +1,10 @@
 package com.cloud.dao.impl;
 
+import java.util.Arrays;
 import java.util.List;
+
+import org.springframework.stereotype.Repository;
+
 import com.cloud.dao.dao.UserDao;
 import com.cloud.model.core.User;
 
@@ -15,6 +19,8 @@ import com.cloud.model.core.User;
  * @version
  * @since JDK 1.8
  */
+
+@Repository
 public class UserDaoimpl implements UserDao {
 
 	/**
@@ -22,8 +28,15 @@ public class UserDaoimpl implements UserDao {
 	 */
 	@Override
 	public List<User> getUser() {
-		// TODO Auto-generated method stub
-		return null;
+		User user = new User();
+		user.setAddress("陕西");
+		user.setAge("26");
+		user.setDept(123);
+		user.setEdu(1);
+		user.setId("100001");
+		user.setName("张三");
+		List<User> list = Arrays.asList(user, user);
+		return list;
 	}
 
 	/**
@@ -31,8 +44,14 @@ public class UserDaoimpl implements UserDao {
 	 */
 	@Override
 	public User getUserById(String id) {
-		// TODO Auto-generated method stub
-		return null;
+		User user = new User();
+		user.setAddress("陕西");
+		user.setAge("26");
+		user.setDept(123);
+		user.setEdu(1);
+		user.setId("100001");
+		user.setName("张三");
+		return user;
 	}
 
 	/**

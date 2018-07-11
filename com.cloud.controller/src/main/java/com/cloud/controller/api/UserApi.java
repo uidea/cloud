@@ -30,14 +30,14 @@ public interface UserApi {
 
 	@RequestMapping(value = "/user", produces = { "application/json" }, method = RequestMethod.GET)
 	@ApiOperation(value = "获取所有用户信息", notes = "返回所有用户信息", tags = { "user" })
-	@ApiResponses(value = { @ApiResponse(code = 200, message = "Successful operation", response = User.class),
+	@ApiResponses(value = { @ApiResponse(code = 200, message = "Successful operation", response = List.class),
 			@ApiResponse(code = 400, message = "Invalid ID supplied"), @ApiResponse(code = 404, message = "User not found") })
-	ResponseEntity<User> getUser();
+	ResponseEntity<List<User>> getUser();
 
 	@RequestMapping(value = "/user/{petId}", produces = { "application/json" }, method = RequestMethod.GET)
 	@ApiOperation(value = "根据ID获取用户信息", notes = "返回单个用户信息", tags = { "user" })
-	@ApiResponses(value = { @ApiResponse(code = 200, message = "Successful operation", response = List.class),
+	@ApiResponses(value = { @ApiResponse(code = 200, message = "Successful operation", response = User.class),
 			@ApiResponse(code = 400, message = "Invalid ID supplied"), @ApiResponse(code = 404, message = "User not found") })
-	ResponseEntity<List<User>> getUserById(@ApiParam(value = "ID of pet to return", required = true) @PathVariable("petId") Long petId);
+	ResponseEntity<User> getUserById(@ApiParam(value = "ID of pet to return", required = true) @PathVariable("petId") String id);
 
 }
