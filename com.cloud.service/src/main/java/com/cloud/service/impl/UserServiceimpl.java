@@ -2,6 +2,9 @@ package com.cloud.service.impl;
 
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
+import com.cloud.dao.dao.UserDao;
 import com.cloud.model.core.User;
 import com.cloud.service.service.UserService;
 
@@ -16,14 +19,16 @@ import com.cloud.service.service.UserService;
   * @version  
   * @since JDK 1.8
 */
+@Service
 public class UserServiceimpl implements UserService{
-
+	
+	private UserDao userDao;
 	/**
 	 * @see com.cloud.service.service.UserService#getUser()
 	 */
 	@Override
 	public List<User> getUser() {
-		// TODO Auto-generated method stub
+		userDao.getUser();
 		return null;
 	}
 
@@ -32,7 +37,7 @@ public class UserServiceimpl implements UserService{
 	 */
 	@Override
 	public User getUserById(String id) {
-		// TODO Auto-generated method stub
+		userDao.getUserById(id);
 		return null;
 	}
 

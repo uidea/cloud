@@ -2,14 +2,11 @@ package com.cloud.controller.data.test;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.Map;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RestController;
 
-import com.cloud.controller.api.UserApi;
 import com.cloud.model.core.User;
 
 /**
