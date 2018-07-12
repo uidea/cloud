@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-
 import com.cloud.controller.api.UserApi;
 import com.cloud.model.core.User;
 import com.cloud.service.service.UserService;
@@ -25,7 +24,7 @@ import com.cloud.service.service.UserService;
 
 @Controller
 public class UserApiController implements UserApi {
-	
+
 	@Autowired
 	private UserService userService;
 
