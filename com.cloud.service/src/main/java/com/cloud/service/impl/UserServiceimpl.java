@@ -2,34 +2,36 @@ package com.cloud.service.impl;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.cloud.dao.dao.UserDao;
 import com.cloud.model.core.User;
 import com.cloud.service.service.UserService;
 
-/** 
-  * @ClassName: UserServiceimpl
-  * @Function: TODO
-  * @Description: TODO
-  * @date: 2018年7月10日 下午5:02:00 
-  * 
-  * @author liubin
-  * @email aguai_liu@163.com
-  * @version  
-  * @since JDK 1.8
-*/
+/**
+ * @ClassName: UserServiceimpl
+ * @Function: TODO
+ * @Description: TODO
+ * @date: 2018年7月10日 下午5:02:00
+ * 
+ * @author liubin
+ * @email aguai_liu@163.com
+ * @version
+ * @since JDK 1.8
+ */
 @Service
-public class UserServiceimpl implements UserService{
-	
+public class UserServiceimpl implements UserService {
+
+	@Autowired
 	private UserDao userDao;
+
 	/**
 	 * @see com.cloud.service.service.UserService#getUser()
 	 */
 	@Override
 	public List<User> getUser() {
-		userDao.getUser();
-		return null;
+		return userDao.getUser();
 	}
 
 	/**
@@ -37,8 +39,7 @@ public class UserServiceimpl implements UserService{
 	 */
 	@Override
 	public User getUserById(String id) {
-		userDao.getUserById(id);
-		return null;
+		return userDao.getUserById(id);
 	}
 
 	/**
@@ -47,7 +48,7 @@ public class UserServiceimpl implements UserService{
 	@Override
 	public void addUser(User user) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	/**
@@ -56,7 +57,7 @@ public class UserServiceimpl implements UserService{
 	@Override
 	public void deleteUserById(String id) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	/**
@@ -65,7 +66,7 @@ public class UserServiceimpl implements UserService{
 	@Override
 	public void deleteUserBatch(String[] ids) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	/**
