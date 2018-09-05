@@ -1,4 +1,6 @@
-﻿# cloud 前期技术准备
+﻿http://localhost:8081/cloud/swagger-ui.html
+
+# cloud 前期技术准备
 
 # 前端框架/技术
 	
