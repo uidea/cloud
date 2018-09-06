@@ -29,8 +29,11 @@ public class UserServiceimpl implements UserService {
 	/**
 	 * @see com.cloud.service.service.UserService#getUser()
 	 */
+	@SuppressWarnings("unused")
+
 	@Override
 	public List<User> getUser() {
+		List<User> list = userDao.getUser();
 		return userDao.getUser();
 	}
 
