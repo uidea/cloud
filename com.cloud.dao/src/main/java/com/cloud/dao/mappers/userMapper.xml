@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"     
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">    
+<!--     
+    namespace：必须与对应的接口全类名一致  UserMapper.java  
+    id ：必须与对应接口的某个对应的方法名一致即必须要和UserMapper.java接口中的方法同名。  
+ -->
+<mapper namespace="com.cloud.dao.dao.UserDao">
+
+<!-- 	<resultMap id="BaseResultMap" type="com.cloud.model.core.User">
+		<id column="id" property="id" jdbcType="CHAR" />
+		<result column="name" property="name" jdbcType="CHAR" />
+		<result column="age" property="age" jdbcType="CHAR" />
+		<result column="sex" property="sex" jdbcType="CHAR" />
+		<result column="idNo" property="idNo" jdbcType="CHAR" />
+		<result column="address" property="address" jdbcType="CHAR" />
+		<result column="edu" property="edu" jdbcType="INTEGER" />
+		<result column="dept" property="dept" jdbcType="INTEGER" />
+		<result column="telNo" property="telNo" jdbcType="CHAR" />
+		<result column="lastModifyDate" property="lastModifyDate" jdbcType="CHAR" />
+		<result column="lastModifyUser" property="lastModifyUser" jdbcType="CHAR" />
+	</resultMap> -->
+
+    <!-- 查询所有用户 -->
+    <select id="getUser" resultType="com.cloud.model.core.User">
+        SELECT * FROM user 
+    </select>
+    
+</mapper>
