@@ -6,9 +6,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+
 import com.cloud.controller.api.UserApi;
 import com.cloud.model.core.User;
 import com.cloud.service.service.UserService;
+
+import io.swagger.annotations.ApiParam;
 
 /**
  * @ClassName: UserController
@@ -22,7 +27,7 @@ import com.cloud.service.service.UserService;
  * @since JDK 1.8
  */
 
-@Controller
+@RestController
 public class UserApiController implements UserApi {
 
 	@Autowired
@@ -41,7 +46,7 @@ public class UserApiController implements UserApi {
 	 * 根据ID获取用户信息
 	 */
 	@Override
-	public ResponseEntity<User> getUserById(String id) {
+	public ResponseEntity<User> getUserById(@ApiParam(value = "ID of pet to return", required = true) @PathVariable("id") String id) {
 		User user = userService.getUserById(id);
 		return new ResponseEntity<User>(user, HttpStatus.OK);
 	}
