@@ -3,6 +3,8 @@
  */
 package com.cloud.model.core;
 
+import org.apache.ibatis.type.Alias;
+
 /**
  * @ClassName: User
  * @Description: 用户信息
@@ -13,6 +15,8 @@ package com.cloud.model.core;
  * @version
  * @since JDK 1.8
  */
+
+@Alias("user")
 public class User {
 
 	private String id;

@@ -7,23 +7,29 @@
  -->
 <mapper namespace="com.cloud.dao.dao.UserDao">
 
-<!-- 	<resultMap id="BaseResultMap" type="com.cloud.model.core.User">
-		<id column="id" property="id" jdbcType="CHAR" />
-		<result column="name" property="name" jdbcType="CHAR" />
-		<result column="age" property="age" jdbcType="CHAR" />
-		<result column="sex" property="sex" jdbcType="CHAR" />
-		<result column="idNo" property="idNo" jdbcType="CHAR" />
-		<result column="address" property="address" jdbcType="CHAR" />
-		<result column="edu" property="edu" jdbcType="INTEGER" />
-		<result column="dept" property="dept" jdbcType="INTEGER" />
-		<result column="telNo" property="telNo" jdbcType="CHAR" />
-		<result column="lastModifyDate" property="lastModifyDate" jdbcType="CHAR" />
-		<result column="lastModifyUser" property="lastModifyUser" jdbcType="CHAR" />
-	</resultMap> -->
-
     <!-- 查询所有用户 -->
-    <select id="getUser" resultType="com.cloud.model.core.User">
+    <select id="getUser" resultType="user">
+        SELECT * FROM user 
+    </select>    
+     <!-- 根据id查询所有用户 -->
+    <select id="getUserById" parameterType="int" resultType="user">
+        SELECT * FROM user WHERE ID=#{id}
+    </select>
+    <!--  -->
+   <!--  <select id="addUser" parameterType="" parameterType="int" >
+        INSERT INTO user (id,name,age,sex,idNo,address,edu,dept,telNo,lastModifyDate,lastModifyUser)
+        values 
+    </select>
+    
+    <select id="deleteUserById" parameterType="int">
         SELECT * FROM user 
     </select>
+    
+    <select id="deleteUserBatch" parameterType="int">
+        SELECT * FROM user 
+    </select>
+     <select id="updateUser" parameterType="int" resultType="com.cloud.model.core.User">
+        SELECT * FROM user 
+    </select> -->
     
 </mapper>
