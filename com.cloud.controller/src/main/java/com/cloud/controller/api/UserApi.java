@@ -28,16 +28,17 @@ import io.swagger.annotations.ApiResponses;
 @RequestMapping(value = { "/api/v1/" })
 public interface UserApi {
 
-	@RequestMapping(value = "/user", produces = { "application/json","application/xml" }, method = RequestMethod.GET)
+	@RequestMapping(value = "/user", produces = { "application/json", "application/xml" }, method = RequestMethod.GET)
 	@ApiOperation(value = "获取所有用户信息", notes = "返回所有用户信息", tags = { "user" })
 	@ApiResponses(value = { @ApiResponse(code = 200, message = "Successful operation", response = List.class),
 			@ApiResponse(code = 400, message = "Invalid ID supplied"), @ApiResponse(code = 404, message = "User not found") })
+	
 	ResponseEntity<List<User>> getUser();
 
-	@RequestMapping(value = "/user/{petId}", produces = { "application/json" }, method = RequestMethod.GET)
+	@RequestMapping(value = "/user/{id}", produces = { "application/json" }, method = RequestMethod.GET)
 	@ApiOperation(value = "根据ID获取用户信息", notes = "返回单个用户信息", tags = { "user" })
 	@ApiResponses(value = { @ApiResponse(code = 200, message = "Successful operation", response = User.class),
 			@ApiResponse(code = 400, message = "Invalid ID supplied"), @ApiResponse(code = 404, message = "User not found") })
-	ResponseEntity<User> getUserById(@ApiParam(value = "ID of pet to return", required = true) @PathVariable("petId") String id);
+	ResponseEntity<User> getUserById(@ApiParam(value = "ID of pet to return", required = true) @PathVariable("id") String id);
 
 }
