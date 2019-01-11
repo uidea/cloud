@@ -23,8 +23,14 @@
 	<bean
 		class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" />
 
-	<mvc:resources mapping="swagger-ui.html"
+	<mvc:default-servlet-handler />
+	
+<!-- 	<mvc:resources mapping="index.html"
+		location="classpath:/static/" /> -->
+		
+	<!-- swagger页面映射配置 -->
+	<!-- <mvc:resources mapping="swagger-ui.html"
 		location="classpath:/META-INF/resources/" />
 	<mvc:resources mapping="/webjars/**"
-		location="classpath:/META-INF/resources/webjars/" />
+		location="classpath:/META-INF/resources/webjars/" /> -->
 </beans>
