@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:context="http://www.springframework.org/schema/context"
-	xmlns:mvc="http://www.springframework.org/schema/mvc"
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:mvc="http://www.springframework.org/schema/mvc"
 	xmlns:p="http://www.springframework.org/schema/p"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans 
 	http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
@@ -18,19 +16,15 @@
 	<context:annotation-config />
 
 	<!-- 设置使用注解的类所在的jar包 -->
-	<context:component-scan
-		base-package="com.cloud.controller" />
-	<bean
-		class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" />
+	<context:component-scan base-package="com.cloud.controller" />
+	<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" />
 
-	<mvc:default-servlet-handler />
-	
-<!-- 	<mvc:resources mapping="index.html"
-		location="classpath:/static/" /> -->
-		
+	<!-- <mvc:default-servlet-handler /> -->
+
+	<mvc:resources mapping="index.html" location="classpath:/" />
+	<mvc:resources mapping="login.html" location="classpath:/static/" />
+
 	<!-- swagger页面映射配置 -->
-	<!-- <mvc:resources mapping="swagger-ui.html"
-		location="classpath:/META-INF/resources/" />
-	<mvc:resources mapping="/webjars/**"
-		location="classpath:/META-INF/resources/webjars/" /> -->
+	<mvc:resources mapping="swagger-ui.html" location="classpath:/META-INF/resources/" />
+	<mvc:resources mapping="/webjars/**" location="classpath:/META-INF/resources/webjars/" />
 </beans>
