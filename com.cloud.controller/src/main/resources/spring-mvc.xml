@@ -21,8 +21,8 @@
 
 	<!-- <mvc:default-servlet-handler /> -->
 
-	<mvc:resources mapping="index.html" location="classpath:/" />
-	<mvc:resources mapping="login.html" location="classpath:/static/" />
+	<mvc:resources mapping="index.html" location="/" />
+	<mvc:resources mapping="login.html" location="/static/" />
 
 	<!-- swagger页面映射配置 -->
 	<mvc:resources mapping="swagger-ui.html" location="classpath:/META-INF/resources/" />
