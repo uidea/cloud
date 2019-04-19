@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.cloud.controller.api.controller.CustInfo;
+import com.cloud.controller.api.controller.Requesta;
 import com.cloud.model.core.User;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponses;
@@ -38,10 +41,10 @@ public class ProductController {
     return ResponseEntity.ok(user);
   }
 
-  @RequestMapping(method = RequestMethod.POST)
+  @RequestMapping(value = "/cust/updateCust",method = RequestMethod.GET)
   @ApiOperation(value = "添加一个新的产品")
   @ApiResponses(value = {@ApiResponse(code = 405, message = "参数错误")})
-  public ResponseEntity<String> add(User product) {
+  public ResponseEntity<String> add(Requesta requesta) {
     return ResponseEntity.ok("SUCCESS");
   }
 
